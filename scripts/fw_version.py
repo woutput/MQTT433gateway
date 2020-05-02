@@ -27,7 +27,7 @@ def get_fw_version():
         return "unknown"
 
 def get_dependencies():
-    lib_storage = os.path.join(env['PROJECTLIBDEPS_DIR'], env['PIOENV'])
+    lib_storage = os.path.join(env['PROJECT_LIBDEPS_DIR'], env['PIOENV'])
     lm = LibraryManager(lib_storage)
     dependencies = {library['name']: library['version']
                     for library in lm.get_installed()}
